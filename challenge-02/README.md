@@ -71,23 +71,20 @@ Crie uma função com as seguintes características:
 */
 function valorDinamico(x, y, z){
   if(x === undefined && y == undefined && z == undefined){
-    var boolean = false;
-    return boolean;
+    return false;
   }
-
   else if(x !== undefined && y === undefined && z === undefined){
     return x;
-  }
-  
+  }  
   else if(x !== undefined && y !== undefined && z === undefined){
     return x + y;
   }
-
-  else(x !== undefined && y !== undefined && z !== undefined){
+  else if(x !== undefined && y !== undefined && z !== undefined){
     return (x + y) / z;
+  } 
+  else{
+    return null;
   }
-  
-  return null;
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
