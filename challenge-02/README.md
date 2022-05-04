@@ -70,20 +70,20 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function valorDinamico(x, y, z){
-  if(x == null && y == null && z == null){
+  if(x === undefined && y == undefined && z == undefined){
     var boolean = false;
     return boolean;
   }
 
-  if(x != null && y == null && z == null){
+  if(x !== undefined && y === undefined && z === undefined){
     return x;
   }
   
-  if(x != null && y != null && z == null){
+  if(x !== undefined && y !== undefined && z === undefined){
     return x + y;
   }
 
-  if(x != null && y != null && z != null){
+  if(x !== undefined && y !== undefined && z !== undefined){
     return (x + y) / z;
   }
   
