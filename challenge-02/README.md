@@ -75,15 +75,15 @@ function valorDinamico(x, y, z){
     return boolean;
   }
 
-  if(x !== undefined && y === undefined && z === undefined){
+  else if(x !== undefined && y === undefined && z === undefined){
     return x;
   }
   
-  if(x !== undefined && y !== undefined && z === undefined){
+  else if(x !== undefined && y !== undefined && z === undefined){
     return x + y;
   }
 
-  if(x !== undefined && y !== undefined && z !== undefined){
+  else(x !== undefined && y !== undefined && z !== undefined){
     return (x + y) / z;
   }
   
