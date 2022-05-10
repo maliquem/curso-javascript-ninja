@@ -10,19 +10,25 @@ Invoque a função criada acima, passando dois números que serão somados, e mo
 o resultado no console, com a frase:
 "A soma de [VALOR 1] e [VALOR2] é igual a [RESULTADO]."
 */
-// ?
+var sum = function calculateSum(x, y){
+    console.log('A soma de ' + x + ' e ' + y + ' é igual a ' + (x + y));
+}
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
 "O nome da função que faz a soma é [NOME DA FUNÇÃO]."
 */
-// ?
+var nome = function nomeFuncao(func){
+    console.log('O nome da função que faz a soma é ' + func.name);
+}
 
 /*
 Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
-// ?
+var varShowName = function showName(){
+    console.log(varShowName.name);
+}
 
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
@@ -48,13 +54,29 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-// ?
+function calculator(oper){
+    return function(x, y){
+        if(oper === '+'){
+            console.log('Resultado da operação: ' + x + ' ' + oper + ' ' + y + ' = ' + (x + y));
+        } else if(oper === '-'){
+            console.log('Resultado da operação: ' + x + ' ' + oper + ' ' + y + ' = ' + (x - y));
+        } else if(oper === '*'){
+            console.log('Resultado da operação: ' + x + ' ' + oper + ' ' + y + ' = ' + (x * y));
+        } else if(oper === '/'){
+            console.log('Resultado da operação: ' + x + ' ' + oper + ' ' + y + ' = ' + (x / y));
+        } else if(oper === '%'){
+            console.log('Resultado da operação: ' + x + ' ' + oper + ' ' + y + ' = ' + (x % y));
+        } else {
+            console.log('Operação inválida.');
+        }
+    }
+}
 
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-// ?
+var sum = calculator('+');
 
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
@@ -66,7 +88,10 @@ Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
 `division` e `mod`, e atribua a elas a função `calculator`, passando o operador
 correto por parâmetro para cada uma delas.
 */
-// ?
+var sub = calculator('-');
+var mul = calculator('*');
+var div = calculator('/');
+var mod = calculator('%');
 
 /*
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
